@@ -4,13 +4,18 @@ import 'package:agrorental/ui/pages/detailEngin.dart';
 class enginInfo extends StatelessWidget {
   final String image;
   final String nom;
+  final double rating;
+  final String localisation;
 
 
   enginInfo({
     required this.image,
     required this.nom,
+    required this.rating,
+    required this.localisation,
   });
 
+  GlobalKey mywidgetKey = GlobalKey();
 
 
   @override
@@ -26,11 +31,11 @@ class enginInfo extends StatelessWidget {
       },
       child: Container(
         width: 220,
-        margin:EdgeInsets.only(left: 2,top: 5,right: 15,bottom: 5),
+        margin:EdgeInsets.only(left: 10,top: 5,right: 15,bottom: 5),
 
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(25),
+          borderRadius: BorderRadius.circular(15),
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.6),
@@ -43,64 +48,87 @@ class enginInfo extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SizedBox(height: 10,),
-            Align(
-              child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 5.0),
-                  child: Text(
-                    nom,
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold
-                    ),
-                    overflow: TextOverflow.ellipsis,
-                    textScaleFactor: 1,
-                    maxLines: 5,
-                    textAlign: TextAlign.center,
-                  )
-              ),
-              alignment: Alignment.center,
-            ),
-            Align(
-              child: Padding(
-                  padding: EdgeInsets.only(left: 10,top: 0,right: 10,bottom: 2),
-                  child: Material(
-                    borderRadius: BorderRadius.circular(20),
-                    elevation: 2.0,
-                    clipBehavior: Clip.hardEdge,
-                    color: Colors.transparent,
-                    child: Ink.image(
-                      image: AssetImage(image),
-                      fit: BoxFit.cover,
-                      width: 350,
-                      height: 180,
-                      child: InkWell(
-                        onTap: (){
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height/3.8,
+              child: Align(
+                child: Padding(
+                    padding: EdgeInsets.only(left: 0,top: 0,right: 0,bottom: 0),
+                    child: Material(
+                      borderRadius: BorderRadius.circular(5),
+                      elevation: 2.0,
+                      clipBehavior: Clip.hardEdge,
+                      color: Colors.transparent,
+                      child: Ink.image(
+                        image: AssetImage(image),
+                        fit: BoxFit.cover,
+                        child: InkWell(
+                          onTap: (){
 
-                        },
+                          },
+                        ),
+                      ),
+                    )
+                ),
+                alignment: Alignment.center,
+              ),
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 60,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Align(
+                    child: Padding(
+                        padding: EdgeInsets.only(left: 20),
+                        child: Text(
+                          nom,
+                          style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                          textScaleFactor: 1,
+                          maxLines: 5,
+                          textAlign: TextAlign.center,
+                        )
+                    ),
+                    alignment: Alignment.topLeft,
+                  ),
+                  Align(
+                    child: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 5.0),
+                      child:Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Icon(Icons.star,size: 16,color: Colors.orange,),
+                              Text(" "+rating.toString()+
+                                  "/5 Rating",
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.black
+                                ),),
+                            ],
+                          ),Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Icon(Icons.location_on,size: 16,color: Colors.orange,),
+                              Text(" "+localisation,
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.black
+                                ),),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
-                  )
-              ),
-              alignment: Alignment.center,
-            ),
-            Align(
-              child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 5.0),
-                child:Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Text(
-                      "En savoir plus",
-                      style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.black
-                      ),),
-                    Icon(Icons.arrow_forward,size: 16,)
-                  ],
-                ),
-              ),
-              alignment: Alignment.center,
+                    alignment: Alignment.center,
+                  ),
+                ],
+              )
             ),
             SizedBox(height: 5,)
 

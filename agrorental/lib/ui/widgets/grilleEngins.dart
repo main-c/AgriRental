@@ -24,17 +24,21 @@ class _lesEnginsState extends State<lesEngins> {
 
     return Scaffold(
 
-      body:  GridView.count(
-        crossAxisCount: 1,
-        children: List.generate(10, (index) {
-          return InkWell(
-              onLongPress: (){
-                //selection
-              },
-              child:  enginInfo(image: "images/trac1.jpeg",nom: "nom")
-          );
-        }),
-      ),
+      body:   ListView.builder(
+        padding: EdgeInsets.only(left: 10,right: 10),
+          scrollDirection: Axis.vertical,
+          itemCount: 10, //nombre de messages dans la bd
+          itemBuilder: (context, index) {
+            return InkWell(
+                onLongPress: () {
+                  //selection
+                },
+                onTap: () {
+
+                },
+                child:  enginInfo(image: "images/trac1.jpeg",nom: "nom",rating: 4.1,localisation: "yaoundé",)
+            );
+          }),
 
     );
   }
