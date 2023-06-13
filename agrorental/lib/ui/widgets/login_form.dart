@@ -1,6 +1,7 @@
 import 'package:agrorental/ui/pages/auth/login.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:agrorental/ui/pages/Accueil.dart';
 // import 'package:mobile/ui/pages/auth/register.dart';
 
 // import '../pages/auth/forget_password.dart';
@@ -219,6 +220,12 @@ class _LoginFormState extends State<LoginForm> {
       }
       setState(() {
         isLoading = true;
+
+
+        Navigator.push(context,
+            MaterialPageRoute(builder: (BuildContext context) {
+              return Accueil(title: "title");
+            }));
       });
 
       // Request.auth_service.login(_username, _password).then((value) {

@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:agrorental/ui/pages/auth/login.dart';
 import 'package:agrorental/ui/theme/theme.dart';
+import 'package:agrorental/ui/pages/Accueil.dart';
 
 class RegisterForm extends StatefulWidget {
   const RegisterForm({super.key});
@@ -406,6 +407,11 @@ class _RegisterFormState extends State<RegisterForm> {
       }
       setState(() {
         isLoading = true;
+
+        Navigator.push(context,
+            MaterialPageRoute(builder: (BuildContext context) {
+              return Accueil(title: "title");
+            }));
       });
 
       //   Request.auth_service

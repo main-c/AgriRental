@@ -6,9 +6,13 @@
       <excludeFolder url="file://$MODULE_DIR$/RAM/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/RAM/build" />
       <excludeFolder url="file://$MODULE_DIR$/RAM/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/agrorental/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/agrorental/build" />
+      <excludeFolder url="file://$MODULE_DIR$/agrorental/.dart_tool" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Dart SDK" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
   </component>
 </module>
