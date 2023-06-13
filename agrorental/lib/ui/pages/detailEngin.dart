@@ -163,7 +163,7 @@ class _EnginDetailState extends State<EnginDetail> {
                 SizedBox(height: 20,),
                 Row(mainAxisAlignment: MainAxisAlignment.start,children: [SizedBox(width: 10,),Text("Nos autres Engins",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),],),
                 Container(
-                  height: 300,
+                  height: 330,
 
                   child: ListView.builder(
                       scrollDirection: Axis.horizontal,
@@ -175,7 +175,7 @@ class _EnginDetailState extends State<EnginDetail> {
                             },
                             onTap: () {
                             },
-                            child: enginInfo(image: "images/trac1.jpeg",nom: "nom",rating: 4.1,localisation: "yaoundé",)
+                            child: enginInfo(image: "images/trac1.jpeg",nom: "New Holland T6070",rating: 4.1,localisation: "yaoundé",)
                         );
                       }),
                 )

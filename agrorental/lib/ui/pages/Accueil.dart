@@ -193,7 +193,7 @@ class _AccueilState extends State<Accueil> {
                 ),
                 Container(
                   padding:EdgeInsets.only(left: 20,top: 5,right: 10,bottom: 5),
-                  height: 300,
+                  height: 330,
                   child: ListView.builder(
                       scrollDirection: Axis.horizontal,
                       itemCount: 10, //nombre de messages dans la bd
@@ -205,7 +205,7 @@ class _AccueilState extends State<Accueil> {
                             onTap: () {
 
                             },
-                            child:  enginInfo(image: "images/trac1.jpeg",nom: "nom",rating: 4.1,localisation: "yaoundé",)
+                            child:  enginInfo(image: "images/trac1.jpeg",nom: "New Holland T6070",rating: 4.1,localisation: "yaoundé",)
                         );
                       }),
                 )

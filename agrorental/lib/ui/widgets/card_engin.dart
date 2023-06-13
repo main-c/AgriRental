@@ -31,7 +31,7 @@ class enginInfo extends StatelessWidget {
       },
       child: Container(
         width: 220,
-        margin:EdgeInsets.only(left: 10,top: 5,right: 15,bottom: 5),
+        margin:EdgeInsets.only(left: 10,top: 5,right: 15,bottom: 20),
 
         decoration: BoxDecoration(
           color: Colors.white,
@@ -61,7 +61,7 @@ class enginInfo extends StatelessWidget {
                       color: Colors.transparent,
                       child: Ink.image(
                         image: AssetImage(image),
-                        fit: BoxFit.cover,
+                        fit: BoxFit.fill,
                         child: InkWell(
                           onTap: (){
 
@@ -81,7 +81,7 @@ class enginInfo extends StatelessWidget {
                 children: [
                   Align(
                     child: Padding(
-                        padding: EdgeInsets.only(left: 20),
+                        padding: EdgeInsets.only(left: 10),
                         child: Text(
                           nom,
                           style: TextStyle(
@@ -105,8 +105,7 @@ class enginInfo extends StatelessWidget {
                           Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Icon(Icons.star,size: 16,color: Colors.orange,),
-                              Text(" "+rating.toString()+
-                                  "/5 Rating",
+                              Text(" "+rating.toString(),
                                 style: TextStyle(
                                     fontSize: 14,
                                     color: Colors.black
