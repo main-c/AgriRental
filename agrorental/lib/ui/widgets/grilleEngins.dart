@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:agrorental/ui/widgets/card_engin.dart';
 
-class lesEngins extends StatefulWidget {
-  const lesEngins({super.key, required this.title});
+import '../pages/detailEngin.dart';
 
+class ListPage extends StatefulWidget {
+  const ListPage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<lesEngins> createState() => _lesEnginsState();
+  State<ListPage> createState() => _ListPageState();
 }
 
-class _lesEnginsState extends State<lesEngins> {
-
+class _ListPageState extends State<ListPage> {
   @override
   void initState() {
     // TODO: implement initState
@@ -21,11 +21,9 @@ class _lesEnginsState extends State<lesEngins> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-
-      body:   ListView.builder(
-        padding: EdgeInsets.only(left: 10,right: 10),
+      body: ListView.builder(
+          padding: const EdgeInsets.only(left: 10, right: 10),
           scrollDirection: Axis.vertical,
           itemCount: 10, //nombre de messages dans la bd
           itemBuilder: (context, index) {
@@ -34,13 +32,21 @@ class _lesEnginsState extends State<lesEngins> {
                   //selection
                 },
                 onTap: () {
-
+                  Navigator.push<void>(
+                    context,
+                    MaterialPageRoute<void>(
+                      builder: (BuildContext context) => const EnginDetail(
+                          image: "images/trac1.jpeg", nom: "New Holland T6070"),
+                    ),
+                  );
                 },
-                child:  enginInfo(image: "images/trac1.jpeg",nom: "New Holland T6070",rating: 4.1,localisation: "yaoundé",)
-            );
+                child: enginInfo(
+                  image: "images/trac1.jpeg",
+                  nom: "New Holland T6070",
+                  rating: 4.1,
+                  localisation: "yaoundé",
+                ));
           }),
-
     );
   }
-
 }

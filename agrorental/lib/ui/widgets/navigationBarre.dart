@@ -25,7 +25,7 @@ class _navigationBarreState extends State<navigationBarre> {
           Padding(padding: const EdgeInsets.only(left: 10.0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
-              children: [
+              children: const  [
                 IconButton(
                     onPressed: null,
                     icon: Icon(Icons.home_outlined, color: Colors.green,

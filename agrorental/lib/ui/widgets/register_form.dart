@@ -4,6 +4,8 @@ import 'package:agrorental/ui/pages/auth/login.dart';
 import 'package:agrorental/ui/theme/theme.dart';
 import 'package:agrorental/ui/pages/Accueil.dart';
 
+import '../pages/HomePage2.dart';
+
 class RegisterForm extends StatefulWidget {
   const RegisterForm({super.key});
 
@@ -410,8 +412,8 @@ class _RegisterFormState extends State<RegisterForm> {
 
         Navigator.push(context,
             MaterialPageRoute(builder: (BuildContext context) {
-              return Accueil(title: "title");
-            }));
+          return Accueil(title: "title");
+        }));
       });
 
       //   Request.auth_service

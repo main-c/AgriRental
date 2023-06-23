@@ -5,6 +5,7 @@ import 'package:agrorental/ui/pages/Accueil.dart';
 // import 'package:mobile/ui/pages/auth/register.dart';
 
 // import '../pages/auth/forget_password.dart';
+import '../pages/HomePage2.dart';
 import '../pages/auth/register.dart';
 import 'forget_password_form.dart';
 
