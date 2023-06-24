@@ -280,8 +280,8 @@ class _AccueilState extends State<Accueil> {
                           onTap: () {},
                           child: enginInfo(
                             image: "images/trac1.jpeg",
-                            nom: "New Holland T6070",
-                            rating: 4.1,
+                            nom: engins[index].name,
+                            rating: engins[index].rate,
                             localisation: "Yaoundé",
                           ));
                     }),

@@ -40,9 +40,7 @@ List<Engin> engins = [
     rate: 4.5,
     price: 100.0,
     images: [
-      "https://picsum.photos/200/300",
-      "https://picsum.photos/200/300",
-      "https://picsum.photos/200/300",
+      "tracteur.jpeg",
     ],
   ),
   Engin(
@@ -54,9 +52,7 @@ List<Engin> engins = [
     rate: 4.2,
     price: 200.0,
     images: [
-      "https://picsum.photos/200/300",
-      "https://picsum.photos/200/300",
-      "https://picsum.photos/200/300",
+      "batteuse.jpeg",
     ],
   ),
   Engin(

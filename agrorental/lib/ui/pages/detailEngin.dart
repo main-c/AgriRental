@@ -18,7 +18,7 @@ class _EnginDetailState extends State<EnginDetail> {
   int totalprice = 0;
 
   String description = "La description";
-  int prix = 100;
+  int prix = 100000;
 
   @override
   void initState() {
